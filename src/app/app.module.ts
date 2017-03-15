@@ -13,6 +13,13 @@ import {Sub2Component} from './footer/sub-footer-2/sub2.component';
 import {Sub3Component} from './footer/sub-footer-3/sub3.component';
 import {AuthorComponent} from './author/author.component';
 import {BookComponent} from './book/book.component';
+/*home*/
+import {FeatureComponent} from './home/feature/feature.component';
+import {ReleaseComponent} from './home/new-release/release.component';
+/*who we are*/
+import {WhoComponent} from './who-we-are/who/who.component';
+import {CoolComponent} from './who-we-are/cool/cool.component';
+
 
 @NgModule({
   declarations: [
@@ -24,15 +31,31 @@ import {BookComponent} from './book/book.component';
     WhoWeAreComponent,
     AuthorComponent,
     BookComponent,
-    HomeComponent
+    HomeComponent,
+    FeatureComponent,
+    ReleaseComponent,
+    WhoComponent,
+    CoolComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: 'home', component :HomeComponent},
-      {path: 'who-we-are', component :WhoWeAreComponent},
+      {path: 'home', component :HomeComponent,
+        children: [
+          { path: '', redirectTo: 'feature', pathMatch: 'full' },
+          { path: 'feature', component: FeatureComponent },
+          { path: 'new-release', component: ReleaseComponent }
+        ]
+      },
+      {path: 'who-we-are', component :WhoWeAreComponent,
+        children: [
+          { path: '', redirectTo: 'who', pathMatch: 'full' },
+          { path: 'who', component: WhoComponent },
+          { path: 'cool', component: CoolComponent }
+        ]
+      },
       {path: 'author', component :AuthorComponent},
       {path: 'book', component :BookComponent}
     ])

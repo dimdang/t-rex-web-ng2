@@ -1,77 +1,18 @@
 <div class="jumbotron">
-    <div class="row">
-        <div class="col-sm-3 col-lg-2">
-            <h4 style="margin-left: 11px;">Who We Are</h4>
-        </div>
-        <div class="col-sm-9 col-lg-10">
-            <h4>Cool Water Ripple Group News</h4>
-        </div>
+  <div class="row">
+    <div class="col-sm-3 col-lg-2">
+      <h4 style="margin-left: 11px;"><a [routerLink]="['who']">Who We Are</a></h4>
     </div>
-
+    <div class="col-sm-9 col-lg-10">
+      <h4><a [routerLink]="['cool']">Cool Water Ripple Group News</a></h4>
+    </div>
+  </div>
 </div>
-<div class="row who">
-    <div class="col-sm-4 first">
-        <img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/736x/9b/e2/59/9be259f352817ac0fd57a11fc5a9c701.jpg" alt="">
-    </div>
-    <div class="col-sm-4 second" >
-        <img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/736x/17/8a/2a/178a2a9dfb7d002bcf35f8ffce1d264b.jpg" alt="">
-    </div>
-    <div class="col-sm-4">
-        <img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/736x/cc/ba/c7/ccbac7347b47a71bb4aa01cd206825fc.jpg" alt="">
-    </div>
-    <div class="col-sm-9">
-        <h2 style="margin-top: 50px;">Who We Are</h2>
-    </div>
-    <div class="col-lg-9 col-sm-8">
-        <h3>Our Mission</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-            Sed nec nibh elit. Nulla efficitur ullamcorper ornare. Ut diam purus, facilisis sed mi a, lobortis pretium ipsum. Integer id
-            tortor urna. Proin dapibus elit vel tincidunt tincidunt. Fusce pellentesque, urna quis pellentesque faucibus, urna purus
-            rutrum sem, sed tincidunt nisi augue tristique lacus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-            </p>
-    </div>
-    <div class="col-lg-3 col-sm-4 circle" >
-        <img class="img-responsive img-circle" src="http://vignette4.wikia.nocookie.net/tomandjerry/images/a/a6/TomJerry.jpg/revision/latest?cb=20140117171741" alt="">
-    </div>
 
-    <div class="col-lg-9 col-sm-8 ">
-        <h3>What We Do</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-            Sed nec nibh elit. Nulla efficitur ullamcorper ornare. Ut diam purus, facilisis sed mi a, lobortis pretium ipsum. Integer id
-            tortor urna. Proin dapibus elit vel tincidunt tincidunt. Fusce pellentesque, urna quis pellentesque faucibus, urna purus
-            rutrum sem, sed tincidunt nisi augue tristique lacus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-        </p>
-    </div>
-    <div class="col-lg-3 col-sm-4 circle" >
-        <img class="img-responsive img-circle" src="http://vignette1.wikia.nocookie.net/parody/images/4/43/Tom-And-Jerry-Cartoon.gif/revision/latest?cb=20140427020639" alt="">
-    </div>
-
-    <div class="col-lg-9 col-sm-8">
-        <h3>Our Products</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-            Sed nec nibh elit. Nulla efficitur ullamcorper ornare. Ut diam purus, facilisis sed mi a, lobortis pretium ipsum. Integer id
-            tortor urna. Proin dapibus elit vel tincidunt tincidunt. Fusce pellentesque, urna quis pellentesque faucibus, urna purus
-            rutrum sem, sed tincidunt nisi augue tristique lacus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum leo. Nullam semper diam id leo consectetur
-            iaculis. Mauris imperdiet nec magna sit amet finibus. Aenean interdum leo ut libero imperdiet, id faucibus nisl tincidunt.
-        </p>
-    </div>
-    <div class="col-lg-3 col-sm-4 circle" >
-        <img class="img-responsive img-circle" src="http://www.cartoonswallpapers.net/wallpapers/tom-jerry-funny-pics-full-hd-image-wallpaper-ipad-air-2.jpg" alt="">
-    </div>
-</div>
+<router-outlet></router-outlet>
 
 <sub1-app></sub1-app>
 <sub2-app></sub2-app>
 <sub3-app></sub3-app>
+
 

@@ -35,12 +35,6 @@
   display: inline;
   padding:0px 20px;
 }
-.all-product{
-  margin: 0px 100px;
-}
-.all-product img{
-  height: 340px;
-}
 .discover .btn{
   background: gray;
   color:#fff;
@@ -54,6 +48,41 @@
 }
 .all-item img{
   margin: auto;
+}
+
+.list-menu{
+  margin-bottom: 25px;
+}
+.discover{
+  margin: 50px 0px;
+}
+.all-item a{
+  color:red;
+  text-decoration: solid;
+}
+.all-circle{
+  margin-top: 30px;
+}
+.border-bottom{
+  border-bottom:3px solid red;
+}
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
 }
 
 
