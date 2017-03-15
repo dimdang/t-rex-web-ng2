@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-    selector: 'home-app',
-    templateUrl:'./home.component.html',
-    styleUrls: ['./home.component.css']
+    selector: 'header-app',
+    templateUrl:'./header.component.html',
+    styleUrls: ['./header.component.css']
 
 })
 
-export class  HomeComponent implements OnInit{
+export class  HeaderComponent implements OnInit{
     pageTitle:string = `Home Test`;
     className:string="border-bottom";
     ngOnInit(): void{

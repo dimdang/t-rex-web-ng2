@@ -1,3 +1,4 @@
+/*
 
 import {PipeTransform, Pipe} from "@angular/core";
 import {IBook} from "../books/book";
@@ -11,6 +12,7 @@ export class BookFilterPipe implements PipeTransform{
 
         filterBy = filterBy? filterBy.toLocaleLowerCase(): null;
         return filterBy ? value.filter((book: IBook)=>
-        book.title.toLocaleLowerCase().indexOf(filterBy)!== -1):value;
+        //book.title.toLocaleLowerCase().indexOf(filterBy)!== -1):value;
     }
 }
+*/

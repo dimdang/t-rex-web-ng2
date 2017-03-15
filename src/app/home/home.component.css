@@ -1,0 +1,60 @@
+
+.slide{
+  background: #eee;
+  border-radius: 0px;
+  margin-bottom: 200px;
+  margin: auto;
+}
+.slide .btn{
+  border-radius: 0px;
+  background: #FFFFFF;
+  color: black;
+  height: 40px;
+}
+.fa {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(68, 188, 221, 0.32);
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+.fa-facebook:hover{
+  background: #3b5999;
+  color:#fff;
+}
+.fa-twitter:hover{
+  background: #55acee;
+  color:#fff;
+}
+.menu ul li{
+  list-style-type: none;
+  display: inline;
+  padding:0px 20px;
+}
+.all-product{
+  margin: 0px 100px;
+}
+.all-product img{
+  height: 340px;
+}
+.discover .btn{
+  background: gray;
+  color:#fff;
+  border-radius: 0px;
+  height: 45px;
+  padding: 0px 30px;
+}
+.all-item{
+  text-align: center;
+  margin: 0px 100px;
+}
+.all-item img{
+  margin: auto;
+}
+
+
+
