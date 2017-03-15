@@ -1,0 +1,41 @@
+.jumbotron{
+    background: #eee;
+    margin-top: 20px;
+    border-radius: 0px;
+    padding:10px 0px ;
+    padding-left: 5px;
+
+}
+.book .col-sm-4{
+    padding: 0px;
+    text-align: center;
+}
+.book{
+    padding: 0px 30px;
+    margin-top: -30px;
+}
+
+.btn{
+    border-radius: 0px;
+    background: #eeeeee;
+    color:black;
+}
+.product .col-md-3{
+    margin-top: 30px;
+}
+.border-cover{
+    padding:5px 0px;
+}
+
+.product-chooser-item {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .hidding{
+        display: none;
+    }
+    .product img{
+        text-align: center;
+    }
+}

@@ -1,0 +1,13 @@
+.sub1{
+    margin-bottom: 0px;
+    margin-top: 40px;
+    border-radius: 0px;
+}
+.sub1 .btn, input{
+    border-radius: 0px;
+    height: 40px;
+}
+.sub1 .btn{
+    background: gray;
+    color:#fff;
+}

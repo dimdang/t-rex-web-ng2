@@ -1,0 +1,118 @@
+thead{
+    color: #039be5;
+}
+
+.menu-top li{
+    list-style-type: none;
+    display: inline;
+    padding: 0px 10px;
+
+}
+.menu-top .border{
+    border-right: 1px solid gray;
+
+}
+.main-menu-top{
+    background: #eee;
+    padding: 1px 0px;
+    margin-bottom: 50px;
+    padding-top: 8px;
+}
+
+.collapse .badge{
+    margin-top: -29px;
+    border-radius:0px;
+    background: red;
+}
+.navbar-brand img{
+    margin-top:-30px;
+}
+.second-nav{
+    margin:0px 2px;
+}
+.second-nav .border{
+    border-right: 1px solid gray;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    background: #fff;
+
+}
+.navbar-default{
+    border:none;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background: #fff;
+    border-bottom: 3px solid red;
+}
+.second-nav ul li a{
+    padding: 0px;
+}
+.second-nav ul li{
+    padding: 0px 15px;
+}
+.border-bottom{
+    border-bottom:3px solid red;
+}
+
+footer{
+    height: 200px;
+    background: #eee;
+    text-align: center;
+}
+.jumbotron {
+    background-color: #eee;
+    border-radius: 0px;
+}
+.jumbotron p{
+    margin-top:-15px;
+    color:gray;
+}
+.enter-email{
+    border-radius: 0px;
+    height: 40px;
+}
+.jumbotron .btn{
+    border-radius: 0px;
+    height: 40px;
+    background: gray;
+    color:#fff;
+}
+.footer-bottom{
+    margin-top: -30px;
+    background: rgba(128, 128, 128, 0.49);
+}
+.footer{
+    margin-top: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-menu-top{
+        text-align: center;
+    }
+    .second-nav ul li{
+        padding: 7px 15px;
+    }
+    .second-nav .border{
+        border-right: none;
+    }
+    .navbar-brand img{
+        margin-top:-15px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .main-menu-top{
+        text-align: center;
+    }
+    .menu-top li{
+        list-style-type: none;
+        display: inline;
+        padding: 0px 5px;
+
+    }
+    .menu-top{
+        margin-right: 30px;
+    }
+}
+
+
+
