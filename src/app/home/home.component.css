@@ -65,6 +65,7 @@
 }
 .border-bottom{
   border-bottom:3px solid red;
+  padding-bottom: 5px;
 }
 a:link {
   text-decoration: none;
@@ -83,6 +84,15 @@ a:hover {
 /* selected link */
 a:active {
   text-decoration: none;
+}
+.slide .btn{
+  margin-top: 30px;
+}
+@media only screen and (max-width: 414px) {
+  .all-item{
+    text-align: center;
+    margin: 0px;
+  }
 }
 
 

@@ -19,7 +19,8 @@ import {ReleaseComponent} from './home/new-release/release.component';
 /*who we are*/
 import {WhoComponent} from './who-we-are/who/who.component';
 import {CoolComponent} from './who-we-are/cool/cool.component';
-
+/*api*/
+import {ApiComponent} from './api/api.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {CoolComponent} from './who-we-are/cool/cool.component';
     FeatureComponent,
     ReleaseComponent,
     WhoComponent,
-    CoolComponent
+    CoolComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
