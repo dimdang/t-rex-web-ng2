@@ -21,6 +21,10 @@ import {WhoComponent} from './who-we-are/who/who.component';
 import {CoolComponent} from './who-we-are/cool/cool.component';
 /*api*/
 import {ApiComponent} from './api/api.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,9 @@ import {ApiComponent} from './api/api.component';
     ReleaseComponent,
     WhoComponent,
     CoolComponent,
-    ApiComponent
+    ApiComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,10 @@ import {ApiComponent} from './api/api.component';
         ]
       },
       {path: 'author', component :AuthorComponent},
-      {path: 'book', component :BookComponent}
+      {path: 'book', component :BookComponent},
+      {path: 'login', component :LoginComponent},
+      {path: 'register', component :RegisterComponent},
+      { path: '**', redirectTo: 'home' }
     ])
   ],
   providers: [],

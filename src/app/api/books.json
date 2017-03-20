@@ -1,0 +1,27 @@
+[
+  {"id":1,
+    "title":"Java Programming",
+    "price":45,
+    "author":"John Doe"
+  },
+  {"id":1,
+    "title":"C# Programming",
+    "price":56,
+    "author":"Kalton"
+  },
+  {"id":1,
+    "title":"Scala Programming",
+    "price":34,
+    "author":"Gooodddo"
+  },
+  {"id":1,
+    "title":"Java Programming",
+    "price":12,
+    "author":"Kelvin"
+  },
+  {"id":1,
+    "title":"Reactive Programming",
+    "price":89,
+    "author":"Tinfy lu"
+  }
+]
