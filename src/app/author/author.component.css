@@ -17,6 +17,8 @@
 .img-circle{
     border: 5px solid rgba(62, 107, 152, 0.08);
     margin-top:30px;
+    width: 160px;
+    height: 160px;
 }
 .img-circle:hover{
    background: #eee;

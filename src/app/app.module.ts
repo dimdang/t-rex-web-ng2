@@ -21,8 +21,9 @@ import {WhoComponent} from './who-we-are/who/who.component';
 import {CoolComponent} from './who-we-are/cool/cool.component';
 /*api*/
 import {ApiComponent} from './api/api.component';
-import { LoginComponent } from './login/login.component';
+
 import { RegisterComponent } from './register/register.component';
+import {DashboardHomeComponent} from './dashboard/home/home.component';
 
 
 
@@ -42,8 +43,8 @@ import { RegisterComponent } from './register/register.component';
     WhoComponent,
     CoolComponent,
     ApiComponent,
-    LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -66,9 +67,11 @@ import { RegisterComponent } from './register/register.component';
       },
       {path: 'author', component :AuthorComponent},
       {path: 'book', component :BookComponent},
-      {path: 'login', component :LoginComponent},
+
       {path: 'register', component :RegisterComponent},
-      { path: '**', redirectTo: 'home' }
+      {path: 'dashboard', component :DashboardHomeComponent},
+      { path: '**', redirectTo: 'home' },
+
     ])
   ],
   providers: [],
