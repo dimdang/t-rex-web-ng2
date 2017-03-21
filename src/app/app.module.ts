@@ -21,10 +21,13 @@ import {WhoComponent} from './who-we-are/who/who.component';
 import {CoolComponent} from './who-we-are/cool/cool.component';
 /*api*/
 import {ApiComponent} from './api/api.component';
-
 import { RegisterComponent } from './register/register.component';
 import {DashboardHomeComponent} from './dashboard/home/home.component';
-
+import {LoginComponent} from './login/login.component';
+import { FilterComponent } from './filter/filter.component';
+import { UserComponent } from './dashboard/user/user.component';
+import { BooksComponent } from './dashboard/books/books.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -44,37 +47,55 @@ import {DashboardHomeComponent} from './dashboard/home/home.component';
     CoolComponent,
     ApiComponent,
     RegisterComponent,
-    DashboardHomeComponent
+    DashboardHomeComponent,
+    LoginComponent,
+    FilterComponent,
+    UserComponent,
+    BooksComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: 'home', component :HomeComponent,
+      {path: 'dashboard', component :DashboardHomeComponent,
         children: [
-          { path: '', redirectTo: 'feature', pathMatch: 'full' },
-          { path: 'feature', component: FeatureComponent },
-          { path: 'new-release', component: ReleaseComponent }
+          {path: 'users', component: UserComponent},
+          {path: 'books', component: BooksComponent},
+          { path: '**', redirectTo: 'BooksComponent'}
         ]
       },
-      {path: 'who-we-are', component :WhoWeAreComponent,
+      {path: '', component :HeaderComponent,
         children: [
-          { path: '', redirectTo: 'who', pathMatch: 'full' },
-          { path: 'who', component: WhoComponent },
-          { path: 'cool', component: CoolComponent }
+          {path: 'contact', component :ContactComponent},
+          {path: 'author', component :AuthorComponent},
+          {path: 'book', component :BookComponent},
+          {path: 'login', component :LoginComponent},
+          {path: 'register', component :RegisterComponent},
+          {path: 'who-we-are', component :WhoWeAreComponent,
+            children: [
+              { path: '', redirectTo: 'who', pathMatch: 'full' },
+              { path: 'who', component: WhoComponent },
+              { path: 'cool', component: CoolComponent }
+            ]
+          },
+          {path: 'home', component :HomeComponent,
+            children: [
+              { path: '', redirectTo: 'feature', pathMatch: 'full' },
+              { path: 'feature', component: FeatureComponent },
+              { path: 'new-release', component: ReleaseComponent }
+            ]
+          },
+          { path: '**', redirectTo: 'home',
+          },
         ]
       },
-      {path: 'author', component :AuthorComponent},
-      {path: 'book', component :BookComponent},
 
-      {path: 'register', component :RegisterComponent},
-      {path: 'dashboard', component :DashboardHomeComponent},
-      { path: '**', redirectTo: 'home' },
 
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }
