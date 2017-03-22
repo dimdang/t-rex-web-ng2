@@ -28,6 +28,8 @@ import { FilterComponent } from './filter/filter.component';
 import { UserComponent } from './dashboard/user/user.component';
 import { BooksComponent } from './dashboard/books/books.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -52,7 +54,9 @@ import { ContactComponent } from './contact/contact.component';
     FilterComponent,
     UserComponent,
     BooksComponent,
-    ContactComponent
+    ContactComponent,
+    ProductDetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +72,8 @@ import { ContactComponent } from './contact/contact.component';
       },
       {path: '', component :HeaderComponent,
         children: [
+          {path: 'details', component :ProductDetailComponent},
+          {path: 'cart', component :CartComponent},
           {path: 'contact', component :ContactComponent},
           {path: 'author', component :AuthorComponent},
           {path: 'book', component :BookComponent},
