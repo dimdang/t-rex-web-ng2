@@ -1,3 +1,6 @@
-input{
+input, select, .btn{
   border-radius: 0px;
+}
+.fa{
+  background: red;
 }

@@ -1,3 +1,42 @@
-<p>
-  category-form works!
-</p>
+<form class="form-horizontal">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Add Book</legend>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">Category Name</label>
+      <div class="col-md-4">
+        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="url">Description</label>
+      <div class="col-md-4">
+        <input id="url" name="url" type="text" placeholder="Description" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="facebook">Status</label>
+      <div class="col-md-4">
+        <input id="facebook" name="facebook" type="text" placeholder="Status" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" ></label>
+      <div class="col-md-4">
+        <button class="btn btn-primary">Add New</button>
+        <a [routerLink]="['/dashboard/category']" class="btn btn-default pull-right">Cancel</a>
+      </div>
+    </div>
+
+
+
+  </fieldset>
+</form>

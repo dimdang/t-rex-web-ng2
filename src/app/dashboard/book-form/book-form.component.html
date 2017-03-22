@@ -5,56 +5,128 @@
     <legend>Add Book</legend>
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="url">Site web</label>
+      <label class="col-md-4 control-label" for="url">Image</label>
       <div class="col-md-4">
-        <input id="url" name="url" type="text" placeholder="Site web" class="form-control input-md" required="">
+        <input id="url" name="url" type="file"  class="form-control input-md" required="">
 
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="facebook">Facebook</label>
+      <label class="col-md-4 control-label" for="facebook">Title</label>
       <div class="col-md-4">
-        <input id="facebook" name="facebook" type="text" placeholder="Facebook" class="form-control input-md" required="">
+        <input id="facebook" name="facebook" type="text" placeholder="Title" class="form-control input-md" required="">
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label pull-left" for="twitter">Twitter</label>
+      <label class="col-md-4 control-label pull-left" for="twitter">ISBN</label>
       <div class="col-md-4">
-        <input id="twitter" name="twitter" type="text" placeholder="Twitter" class="form-control input-md" required="">
-
-      </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="bandcamp">Bandcamp</label>
-      <div class="col-md-4">
-        <input id="bandcamp" name="bandcamp" type="text" placeholder="Bandcamp" class="form-control input-md" required="">
+        <input id="twitter" name="twitter" type="text" placeholder="ISBN" class="form-control input-md" required="">
 
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="soundcloud">Soundcloud</label>
+      <label class="col-md-4 control-label" for="bandcamp">Price</label>
       <div class="col-md-4">
-        <input id="soundcloud" name="soundcloud" type="text" placeholder="Soundcloud" class="form-control input-md" required="">
+        <input id="bandcamp" name="bandcamp" type="text" placeholder="Price" class="form-control input-md" required="">
+
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">Autre</label>
+      <label class="col-md-4 control-label" for="soundcloud">Unit</label>
       <div class="col-md-4">
-        <input id="Autre" name="Autre" type="text" placeholder="http://" class="form-control input-md" required="">
+        <input id="soundcloud" name="soundcloud" type="text" placeholder="Unit" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">Publisher Name</label>
+      <div class="col-md-4">
+        <input id="Autre" name="Autre" type="text" placeholder="Publisher Name" class="form-control input-md" required="">
 
       </div>
     </div>
 
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="url">Published Year</label>
+      <div class="col-md-4">
+        <input id="url" name="url" type="text" placeholder="Published Year" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="facebook">Pages</label>
+      <div class="col-md-4">
+        <input id="facebook" name="facebook" type="text" placeholder="page" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label pull-left" for="twitter">Language</label>
+      <div class="col-md-4">
+        <input id="twitter" name="twitter" type="text" placeholder="Language" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="bandcamp">Shipping Weight</label>
+      <div class="col-md-4">
+        <input id="bandcamp" name="bandcamp" type="text" placeholder="Shipping Weight" class="form-control input-md" required="">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="soundcloud">Book Dimension</label>
+      <div class="col-md-4">
+        <input id="soundcloud" name="soundcloud" type="text" placeholder="Book Dimension" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">Category</label>
+      <div class="col-md-4">
+        <select name="" id="" class="form-control">
+          <option value="" selected disabled>---Select---</option>
+          <option value="">Bill Gate</option>
+          <option value="">Stev Job</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">Author</label>
+      <div class="col-md-4">
+        <select name=""  class="form-control">
+          <option value="" selected disabled>---Select---</option>
+          <option value="">Thomas Thomson</option>
+          <option value="">Mr Joke</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" ></label>
+      <div class=" col-md-4">
+        <button class="btn btn-primary">Add New</button>
+        <a [routerLink]="['/dashboard/book']" class="btn btn-default pull-right">Cancel</a>
+      </div>
+    </div>
 
   </fieldset>
 </form>
