@@ -30,6 +30,13 @@ import { BooksComponent } from './dashboard/books/books.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
+import { CategoryComponent } from './dashboard/category/category.component';
+import { DashAuthorComponent } from './dashboard/dash-author/dash-author.component';
+import { DashOrderComponent } from './dashboard/dash-order/dash-order.component';
+import { BookFormComponent } from './dashboard/book-form/book-form.component';
+import { CategoryFormComponent } from './dashboard/category-form/category-form.component';
+import { UserFormComponent } from './dashboard/user-form/user-form.component';
 
 
 @NgModule({
@@ -56,7 +63,14 @@ import { CartComponent } from './cart/cart.component';
     BooksComponent,
     ContactComponent,
     ProductDetailComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent,
+    CategoryComponent,
+    DashAuthorComponent,
+    DashOrderComponent,
+    BookFormComponent,
+    CategoryFormComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
@@ -65,13 +79,21 @@ import { CartComponent } from './cart/cart.component';
     RouterModule.forRoot([
       {path: 'dashboard', component :DashboardHomeComponent,
         children: [
-          {path: 'users', component: UserComponent},
-          {path: 'books', component: BooksComponent},
-          { path: '**', redirectTo: 'BooksComponent'}
+          {path: 'user', component: UserComponent},
+          {path: 'add-book', component: BookFormComponent},
+          {path: 'book', component: BooksComponent},
+          {path: 'author', component: DashAuthorComponent},
+          {path: 'category', component: CategoryComponent},
+          {path: 'order', component: DashOrderComponent},
+          {path: 'add-user', component: UserFormComponent},
+          {path: 'add-category', component: CategoryFormComponent},
+          { path: '**', redirectTo: 'BooksComponent'},
+
         ]
       },
       {path: '', component :HeaderComponent,
         children: [
+          {path: 'payment', component :PaymentComponent},
           {path: 'details', component :ProductDetailComponent},
           {path: 'cart', component :CartComponent},
           {path: 'contact', component :ContactComponent},
@@ -93,8 +115,7 @@ import { CartComponent } from './cart/cart.component';
               { path: 'new-release', component: ReleaseComponent }
             ]
           },
-          { path: '**', redirectTo: 'home',
-          },
+          //{ path: '**', redirectTo: 'home' },
         ]
       },
 

@@ -78,7 +78,7 @@
       <!-- /.dropdown -->
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          <img style="width:50px; height: 50px; border-radius: 50px;" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/09/17/lionel-messi.jpg" alt="">
+          <img style="width:50px; height: 50px; border-radius: 50px;" src="http://vignette1.wikia.nocookie.net/mr-peabody-sherman/images/e/ee/Modern_sherman.png/revision/latest?cb=20140220211714" alt="">
         </a>
         <ul class="dropdown-menu dropdown-user">
           <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -113,22 +113,19 @@
             <a [routerLink]="['users']"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Books<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-              <li>
-                <a [routerLink]="['books']">All Books</a>
-              </li>
-              <li>
-                <a href="morris.html">Morris.js Charts</a>
-              </li>
-            </ul>
-            <!-- /.nav-second-level -->
+            <a [routerLink]="['book']"><i class="fa fa-book fa-fw"></i> Books</a>
           </li>
           <li>
-            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+            <a [routerLink]="['user']"><i class="fa fa-user fa-fw"></i> Users</a>
           </li>
           <li>
-            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+            <a [routerLink]="['category']"><i class="fa fa-table fa-fw"></i> Category</a>
+          </li>
+          <li>
+            <a [routerLink]="['order']"><i class="fa fa-edit fa-fw"></i> Order</a>
+          </li>
+          <li>
+            <a [routerLink]="['author']"><i class="fa fa-users fa-fw"></i> Author</a>
           </li>
           <li>
             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
@@ -155,36 +152,6 @@
             <!-- /.nav-second-level -->
           </li>
           <li>
-            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-              <li>
-                <a href="#">Second Level Item</a>
-              </li>
-              <li>
-                <a href="#">Second Level Item</a>
-              </li>
-              <li>
-                <a href="#">Third Level <span class="fa arrow"></span></a>
-                <ul class="nav nav-third-level">
-                  <li>
-                    <a href="#">Third Level Item</a>
-                  </li>
-                  <li>
-                    <a href="#">Third Level Item</a>
-                  </li>
-                  <li>
-                    <a href="#">Third Level Item</a>
-                  </li>
-                  <li>
-                    <a href="#">Third Level Item</a>
-                  </li>
-                </ul>
-                <!-- /.nav-third-level -->
-              </li>
-            </ul>
-            <!-- /.nav-second-level -->
-          </li>
-          <li>
             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
               <li>
@@ -206,12 +173,11 @@
   <div id="page-wrapper">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">Dashboard</h1>
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
 </div>
 
-<!-- /#wrapper -->
+
 
