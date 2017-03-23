@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LoggerService} from './logger.service';
 
-import axios from 'axios'
 
 @Component({
   selector: 'api-app',

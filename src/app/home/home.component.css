@@ -54,6 +54,9 @@
   width: 150px;
   height: 150px;
 }
+.all-item img:hover{
+  border: 5px solid  rgba(157, 157, 157, 0.09);
+}
 
 .list-menu{
   margin-bottom: 25px;
@@ -71,7 +74,9 @@
 }
 .all-circle img{
   margin: auto;
+
 }
+
 .border-bottom{
   border-bottom:3px solid red;
   padding-bottom: 5px;

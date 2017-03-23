@@ -37,6 +37,7 @@ import { DashOrderComponent } from './dashboard/dash-order/dash-order.component'
 import { BookFormComponent } from './dashboard/book-form/book-form.component';
 import { CategoryFormComponent } from './dashboard/category-form/category-form.component';
 import { UserFormComponent } from './dashboard/user-form/user-form.component';
+import {AuthGuard} from './services/auth.guard';
 
 
 @NgModule({
@@ -77,7 +78,7 @@ import { UserFormComponent } from './dashboard/user-form/user-form.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: 'dashboard', component :DashboardHomeComponent,
+      {path: 'dashboard', component :DashboardHomeComponent, canActivate: [AuthGuard],
         children: [
           {path: 'user', component: UserComponent},
           {path: 'add-book', component: BookFormComponent},
@@ -122,7 +123,7 @@ import { UserFormComponent } from './dashboard/user-form/user-form.component';
 
     ])
   ],
-  providers: [],
-  bootstrap: [AppComponent ]
+  providers: [AuthGuard],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

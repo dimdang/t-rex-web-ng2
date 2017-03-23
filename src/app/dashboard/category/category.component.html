@@ -7,10 +7,10 @@
     <input  type="text" placeholder="Search Category">
   </div>
 </div>
-
 <table class="table table-bordered">
   <thead>
   <tr>
+    <th>ID</th>
     <th>Category Name</th>
     <th>Description</th>
     <th>Status</th>
@@ -18,33 +18,17 @@
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>John</td>
-    <td>Dooley good in condition</td>
-    <td>true</td>
+ <!-- <li *ngFor="let user of users">{{user.email}}</li>-->
+  <tr *ngFor="let category of categories">
+    <td>{{category.id}}</td>
+    <td>{{category.name}}</td>
+    <td>{{category.description}}</td>
+    <td>{{category.status}}</td>
     <td style="text-align: center;">
       <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
       <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
     </td>
+  </tr>
 
-  </tr>
-  <tr>
-    <td>Mary</td>
-    <td>Dooley good in condition</td>
-    <td>true</td>
-    <td style="text-align: center;">
-      <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
-      <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
-    </td>
-  </tr>
-  <tr>
-    <td>July</td>
-    <td>Dooley good in condition</td>
-    <td>true</td>
-    <td style="text-align: center;">
-      <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
-      <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
-    </td>
-  </tr>
   </tbody>
 </table>

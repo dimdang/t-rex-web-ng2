@@ -7,10 +7,6 @@ import {Router} from "@angular/router";
 @Injectable()
 export class AuthenticateService {
 
-
-
-
-
   constructor(private http: Http, private router:Router) { }
 
   createAuthorizationHeader(headers: Headers) {
@@ -32,6 +28,7 @@ export class AuthenticateService {
       },{headers: headers})
       .map((response: Response) => {
         let user = response.json();
+        console.log(user)
         if (user && user.data.token) {
           localStorage.setItem('token', JSON.stringify(user.data.token));
           this.router.navigate(["/dashboard"]);
@@ -44,6 +41,24 @@ export class AuthenticateService {
 
   logout() {
     localStorage.removeItem('token');
+  }
+
+  registerAuthenticate(email: string, password: string){
+    let headers=new Headers();
+    this.createAuthorizationHeader(headers);
+    return this.http.post("http://192.168.17.194:4900/api/v1/accounts",{
+      "account":
+      {
+        "email": email,
+        "password": password,
+        "role": 1,
+        "status": true
+      }
+    },{
+      headers: headers
+    }).map(
+      (res)=> res.json()
+    )
   }
 
 }

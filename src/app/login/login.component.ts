@@ -12,13 +12,14 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
   object=[];
   user = {
-    email:"",
-    password:""
-  }
+  email:"",
+  password:""
+}
 
   ngOnInit(){
     this.authenticateService.logout();
   }
+
   constructor(private router: Router, private authenticateService:AuthenticateService){}
 
   login() {
@@ -29,6 +30,5 @@ export class LoginComponent implements OnInit {
          alert("error occur.");
         });
   }
-
 }
 

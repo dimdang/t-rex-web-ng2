@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" (ngSubmit)="addCategory()">
   <fieldset>
 
     <!-- Form Name -->
@@ -7,27 +7,25 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="Autre">Category Name</label>
       <div class="col-md-4">
-        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required="">
-
+        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required=""
+               [(ngModel)]="category.name" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
-
     <div class="form-group">
       <label class="col-md-4 control-label" for="url">Description</label>
       <div class="col-md-4">
-        <input id="url" name="url" type="text" placeholder="Description" class="form-control input-md" required="">
-
+        <input id="url" name="url" type="text" placeholder="Description" class="form-control input-md" required=""
+               [(ngModel)]="category.description" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
-
     <!-- Text input-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="facebook">Status</label>
       <div class="col-md-4">
-        <input id="facebook" name="facebook" type="text" placeholder="Status" class="form-control input-md" required="">
+        <input id="facebook" name="facebook" type="text" placeholder="Status" class="form-control input-md" required=""
+               [(ngModel)]="category.status" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
-
     <div class="form-group">
       <label class="col-md-4 control-label" ></label>
       <div class="col-md-4">
@@ -35,8 +33,6 @@
         <a [routerLink]="['/dashboard/category']" class="btn btn-default pull-right">Cancel</a>
       </div>
     </div>
-
-
 
   </fieldset>
 </form>
