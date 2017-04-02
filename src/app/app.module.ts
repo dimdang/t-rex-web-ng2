@@ -13,6 +13,7 @@ import {Sub2Component} from './footer/sub-footer-2/sub2.component';
 import {Sub3Component} from './footer/sub-footer-3/sub3.component';
 import {AuthorComponent} from './author/author.component';
 import {BookComponent} from './book/book.component';
+import { ReactiveFormsModule } from '@angular/forms';
 /*home*/
 import {FeatureComponent} from './home/feature/feature.component';
 import {ReleaseComponent} from './home/new-release/release.component';
@@ -32,15 +33,21 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { CartComponent } from './cart/cart.component';
 import { PaymentComponent } from './payment/payment.component';
 import { CategoryComponent } from './dashboard/category/category.component';
-import { DashAuthorComponent } from './dashboard/dash-author/dash-author.component';
+import { DashAuthorComponent } from './dashboard/author/author.component';
 import { DashOrderComponent } from './dashboard/dash-order/dash-order.component';
 import { BookFormComponent } from './dashboard/book-form/book-form.component';
 import { CategoryFormComponent } from './dashboard/category-form/category-form.component';
-import { UserFormComponent } from './dashboard/user-form/user-form.component';
 import {AuthGuard} from './services/auth.guard';
-
-
+import { AuthorFormComponent } from './dashboard/author-form/author-form.component';
+import {ImageUploadModule} from "angular2-image-upload";
+import { FilterPipe } from './dashboard/category/filter.pipe';
+import {Ng2PaginationModule} from 'ng2-pagination';
+import { CategoryFormUpdateComponent } from './dashboard/category-form-update/category-form-update.component';
+import {HeaderService} from './services/header.service';
+import { AuthorFormUpdateComponent } from './dashboard/author-form-update/author-form-update.component';
+import { BookFormUpdateComponent } from './dashboard/book-form-update/book-form-update.component';
 @NgModule({
+
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -71,10 +78,18 @@ import {AuthGuard} from './services/auth.guard';
     DashOrderComponent,
     BookFormComponent,
     CategoryFormComponent,
-    UserFormComponent
-  ],
+    AuthorFormComponent,
+    FilterPipe,
+    CategoryFormUpdateComponent,
+    AuthorFormUpdateComponent,
+    BookFormUpdateComponent,
+     ],
+
   imports: [
+    ImageUploadModule.forRoot(),
+    Ng2PaginationModule,
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
@@ -82,12 +97,13 @@ import {AuthGuard} from './services/auth.guard';
         children: [
           {path: 'user', component: UserComponent},
           {path: 'add-book', component: BookFormComponent},
+          {path: 'add-author', component: AuthorFormComponent},
           {path: 'book', component: BooksComponent},
           {path: 'author', component: DashAuthorComponent},
           {path: 'category', component: CategoryComponent},
           {path: 'order', component: DashOrderComponent},
-          {path: 'add-user', component: UserFormComponent},
           {path: 'add-category', component: CategoryFormComponent},
+          {path: 'update-category/:id', component: CategoryFormUpdateComponent},
           { path: '**', redirectTo: 'BooksComponent'},
 
         ]
@@ -119,8 +135,6 @@ import {AuthGuard} from './services/auth.guard';
           //{ path: '**', redirectTo: 'home' },
         ]
       },
-
-
     ])
   ],
   providers: [AuthGuard],

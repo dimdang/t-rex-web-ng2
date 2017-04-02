@@ -7,6 +7,8 @@ import {Router} from "@angular/router";
 @Injectable()
 export class AuthenticateService {
 
+  API_URL= "http://localhost:4900/api/v1/";
+
   constructor(private http: Http, private router:Router) { }
 
   createAuthorizationHeader(headers: Headers) {
@@ -18,7 +20,7 @@ export class AuthenticateService {
     let headers=new Headers();
     this.createAuthorizationHeader(headers);
 
-    return this.http.post('http://192.168.17.194:4900/api/v1/login',
+    return this.http.post(this.API_URL+'login',
       {
         "account":
         {
@@ -46,7 +48,7 @@ export class AuthenticateService {
   registerAuthenticate(email: string, password: string){
     let headers=new Headers();
     this.createAuthorizationHeader(headers);
-    return this.http.post("http://192.168.17.194:4900/api/v1/accounts",{
+    return this.http.post(this.API_URL+"accounts",{
       "account":
       {
         "email": email,

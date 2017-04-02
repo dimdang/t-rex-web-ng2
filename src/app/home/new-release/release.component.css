@@ -4,6 +4,9 @@
 .all-product img{
   height: 300px;
 }
+.all-product{
+  margin: 0px 90px;
+}
 @media only screen and (max-width: 800px) {
   .all-product{
     margin: 0px;

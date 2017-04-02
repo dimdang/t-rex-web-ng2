@@ -1,14 +1,12 @@
-<form class="form-horizontal">
+<form class="form-horizontal" enctype="multipart/form-data" (ngSubmit)="addBook()">
   <fieldset>
-
     <!-- Form Name -->
     <legend>Add Book</legend>
     <!-- Text input-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="url">Image</label>
       <div class="col-md-4">
-        <input id="url" name="url" type="file"  class="form-control input-md" required="">
-
+        <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".png,.jpg,.jpeg">
       </div>
     </div>
 
@@ -16,7 +14,8 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="facebook">Title</label>
       <div class="col-md-4">
-        <input id="facebook" name="facebook" type="text" placeholder="Title" class="form-control input-md" required="">
+        <input id="facebook" name="facebook" type="text" placeholder="Title" class="form-control input-md" required=""
+        [(ngModel)]="book.title" [ngModelOptions]="{standalone: true}" >
       </div>
     </div>
 
@@ -24,100 +23,106 @@
     <div class="form-group">
       <label class="col-md-4 control-label pull-left" for="twitter">ISBN</label>
       <div class="col-md-4">
-        <input id="twitter" name="twitter" type="text" placeholder="ISBN" class="form-control input-md" required="">
+        <input id="twitter" name="twitter" type="text" placeholder="ISBN" class="form-control input-md" required=""
+               [(ngModel)]="book.isbn" [ngModelOptions]="{standalone: true}" >
 
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="bandcamp">Price</label>
+      <label class="col-md-4 control-label" for="price">Price</label>
       <div class="col-md-4">
-        <input id="bandcamp" name="bandcamp" type="text" placeholder="Price" class="form-control input-md" required="">
+        <input id="price" name="bandcamp" type="text" placeholder="Price" class="form-control input-md" required=""
+               [(ngModel)]="book.price" [ngModelOptions]="{standalone: true}" >
 
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="soundcloud">Unit</label>
+      <label class="col-md-4 control-label" for="unit">Unit</label>
       <div class="col-md-4">
-        <input id="soundcloud" name="soundcloud" type="text" placeholder="Unit" class="form-control input-md" required="">
+        <input id="unit" name="soundcloud" type="text" placeholder="Unit" class="form-control input-md" required=""
+               [(ngModel)]="book.unit" [ngModelOptions]="{standalone: true}" >
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">Publisher Name</label>
+      <label class="col-md-4 control-label" for="name">Publisher Name</label>
       <div class="col-md-4">
-        <input id="Autre" name="Autre" type="text" placeholder="Publisher Name" class="form-control input-md" required="">
+        <input id="name" name="Autre" type="text" placeholder="Publisher Name" class="form-control input-md" required=""
+               [(ngModel)]="book.publisher_name" [ngModelOptions]="{standalone: true}">
 
       </div>
     </div>
 
     <div class="form-group">
-      <label class="col-md-4 control-label" for="url">Published Year</label>
+      <label class="col-md-4 control-label" for="year">Published Year</label>
       <div class="col-md-4">
-        <input id="url" name="url" type="text" placeholder="Published Year" class="form-control input-md" required="">
-
-      </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="facebook">Pages</label>
-      <div class="col-md-4">
-        <input id="facebook" name="facebook" type="text" placeholder="page" class="form-control input-md" required="">
-      </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label pull-left" for="twitter">Language</label>
-      <div class="col-md-4">
-        <input id="twitter" name="twitter" type="text" placeholder="Language" class="form-control input-md" required="">
+        <input id="year" name="url" type="text" placeholder="Published Year" class="form-control input-md" required=""
+               [(ngModel)]="book.published_year" [ngModelOptions]="{standalone: true}">
 
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="bandcamp">Shipping Weight</label>
+      <label class="col-md-4 control-label" for="pages">Pages</label>
       <div class="col-md-4">
-        <input id="bandcamp" name="bandcamp" type="text" placeholder="Shipping Weight" class="form-control input-md" required="">
+        <input id="pages" name="facebook" type="text" placeholder="page" class="form-control input-md" required=""
+               [(ngModel)]="book.page_count" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label pull-left" for="lang">Language</label>
+      <div class="col-md-4">
+        <input id="lang" name="twitter" type="text" placeholder="Language" class="form-control input-md" required=""
+               [(ngModel)]="book.language" [ngModelOptions]="{standalone: true}">
 
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="soundcloud">Book Dimension</label>
+      <label class="col-md-4 control-label" for="shipping">Shipping Weight</label>
       <div class="col-md-4">
-        <input id="soundcloud" name="soundcloud" type="text" placeholder="Book Dimension" class="form-control input-md" required="">
+        <input id="shipping" name="bandcamp" type="text" placeholder="Shipping Weight" class="form-control input-md" required=""
+               [(ngModel)]="book.shipping_weight" [ngModelOptions]="{standalone: true}">
+
       </div>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">Category</label>
+      <label class="col-md-4 control-label" for="dimension">Book Dimension</label>
       <div class="col-md-4">
-        <select name="" id="" class="form-control">
+        <input id="dimension" name="soundcloud" type="text" placeholder="Book Dimension" class="form-control input-md" required=""
+               [(ngModel)]="book.book_dimensions" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="category">Category</label>
+      <div class="col-md-4">
+        <select name="" id="category" class="form-control" [(ngModel)]="book.category_id" [ngModelOptions]="{standalone: true}">
           <option value="" selected disabled>---Select---</option>
-          <option value="">Bill Gate</option>
-          <option value="">Stev Job</option>
+          <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
         </select>
 
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">Author</label>
+      <label class="col-md-4 control-label" for="Author">Author</label>
       <div class="col-md-4">
-        <select name=""  class="form-control">
+        <select name=""  class="form-control" [(ngModel)]="book.author_id" [ngModelOptions]="{standalone: true}">
           <option value="" selected disabled>---Select---</option>
-          <option value="">Thomas Thomson</option>
-          <option value="">Mr Joke</option>
+          <option *ngFor="let author of authors" [value]="author.id" >{{author.firstname+" "+author.lastname}}</option>
         </select>
-
       </div>
     </div>
     <div class="form-group">
@@ -127,6 +132,5 @@
         <a [routerLink]="['/dashboard/book']" class="btn btn-default pull-right">Cancel</a>
       </div>
     </div>
-
   </fieldset>
 </form>

@@ -1,0 +1,52 @@
+<form class="form-horizontal" (ngSubmit)="addAuthor()">
+  <fieldset>
+
+    <!-- Form Name -->
+    <legend>Add Author</legend>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">Photo</label>
+      <div class="col-md-4">
+        <input id="photot" name="photo" type="text" placeholder="Photo" class="form-control input-md" required=""
+               [(ngModel)]="author.photo" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">First Name</label>
+      <div class="col-md-4">
+        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required=""
+               [(ngModel)]="author.firstname" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Autre">Last Name</label>
+      <div class="col-md-4">
+        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required=""
+               [(ngModel)]="author.lastname" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="url">Description</label>
+      <div class="col-md-4">
+        <input id="url" name="url" type="text" placeholder="Description" class="form-control input-md" required=""
+               [(ngModel)]="author.description" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="facebook">Status</label>
+      <div class="col-md-4">
+        <input id="facebook" name="facebook" type="text" placeholder="Status" class="form-control input-md" required=""
+               [(ngModel)]="author.status" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" ></label>
+      <div class="col-md-4">
+        <button class="btn btn-primary">Add New</button>
+        <a [routerLink]="['/dashboard/author']" class="btn btn-default pull-right">Cancel</a>
+      </div>
+    </div>
+    <image-upload [url]="'C:\Users\acer\Desktop\Pipe'"></image-upload>
+  </fieldset>
+</form>

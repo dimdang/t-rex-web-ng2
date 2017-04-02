@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {HeaderService} from '../../services/header.service';
+import {ICategory} from './category';
 
 @Injectable()
 export class CategoryService {
 
+  constructor(private http: Http , private header: HeaderService) { }
 
-  constructor(private http: Http) { }
-
-  createAuthorizationHeader(headers: Headers) {
-    headers.append('Authorization', 'Basic ' +
-      'dC1yZXg6dC1yZXhAMm50JUVsaXhpcjk=');
-  }
 
   getCategory(){
     let headers=new Headers();
-    this.createAuthorizationHeader(headers);
-    return this.http.get("http://192.168.17.194:4900/api/v1/categories",{
+    this.header.createAuthorizationHeader(headers);
+    return this.http.get(this.header.API_URL+"categories",{
       headers: headers
     }).map(
       (res)=> res.json()
@@ -26,8 +23,43 @@ export class CategoryService {
   addCategory(name:string, description:string, status:boolean){
 
     let headers=new Headers();
-    this.createAuthorizationHeader(headers);
-    return this.http.post("http://192.168.17.194:4900/api/v1/categories",{"category":
+    this.header.createAuthorizationHeader(headers);
+    return this.http.post(this.header.API_URL+"categories",{"category":
+      {
+        "name": name,
+        "description": description,
+        "status": status
+      }
+    },{
+      headers: headers
+    }).map(
+      (res)=> res.json()
+    )
+  }
+
+  deleteCateogry(id: number){
+    let header =new Headers();
+    this.header.createAuthorizationHeader(header);
+    return this.http.delete(this.header.API_URL+"categories/"+id,{headers: header}).map(
+      (res)=> {return;}
+    )
+  }
+
+  getCategoryById(id:number){
+    let headers=new Headers();
+    this.header.createAuthorizationHeader(headers);
+    return this.http.get(this.header.API_URL+"categories/"+id,{
+      headers: headers
+    }).map(
+      (res)=> res.json()
+    )
+  }
+
+  updateCategory(name:string, description:string, status:boolean,id:number){
+
+    let headers=new Headers();
+    this.header.createAuthorizationHeader(headers);
+    return this.http.put(this.header.API_URL+"categories"+id,{"category":
       {
         "name": name,
         "description": description,

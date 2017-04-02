@@ -1,6 +1,11 @@
 thead{
     color: #039be5;
 }
+.navbar-brand img{
+  width:170px;
+  height: 100px;
+  margin-top: -50px;
+}
 
 .menu-top li{
     list-style-type: none;
@@ -24,32 +29,7 @@ thead{
     border-radius:0px;
     background: red;
 }
-.navbar-brand img{
-    margin-top:-30px;
-}
-.second-nav{
-    margin:0px 2px;
-}
-.second-nav .border{
-    border-right: 1px solid gray;
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-    background: #fff;
 
-}
-.navbar-default{
-    border:none;
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-    background: #fff;
-    border-bottom: 3px solid red;
-}
-.second-nav ul li a{
-    padding: 0px;
-}
-.second-nav ul li{
-    padding: 0px 15px;
-}
 .border-bottom{
 
     border-bottom:3px solid red;
@@ -85,45 +65,3 @@ footer{
 .footer{
     margin-top: 60px;
 }
-
-@media only screen and (max-width: 768px) {
-    .main-menu-top{
-        text-align: center;
-    }
-    .second-nav ul li{
-        padding: 7px 15px;
-    }
-    .second-nav .border{
-        border-right: none;
-    }
-    .navbar-brand img{
-        margin-top:-15px;
-
-    }
-  .navbar-brand {
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-    margin-top: -70px;
-  }
-  .navbar{
-      padding-top: 30px;
-     }
-
-}
-@media only screen and (max-width: 414px) {
-    .main-menu-top{
-        text-align: center;
-    }
-    .menu-top li{
-        list-style-type: none;
-        display: inline;
-        padding: 0px 5px;
-    }
-    .menu-top{
-        margin-right: 30px;
-    }
-}
-
-
-

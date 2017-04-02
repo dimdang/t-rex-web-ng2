@@ -1,0 +1,41 @@
+
+<div class="row" style="padding: 20px 0px;">
+  <div class="col-sm-6">
+    <a style="border-radius: 0px;" class="btn btn-primary" [routerLink]="['/dashboard/add-author']">Add Author</a>
+  </div>
+  <div class="col-sm-6 ">
+    <input  type="text" [(ngModel)]='authorFilter' placeholder="Search Author">
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Image</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th style="text-align: center;">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- <li *ngFor="let user of users">{{user.email}}</li>-->
+  <tr *ngFor="let author of authors| paginate: { itemsPerPage: 2, currentPage: p }">
+    <td>{{author.id}}</td>
+    <td>{{author.photo}}</td>
+    <td>{{author.firstname}}</td>
+    <td>{{author.lastname}}</td>
+    <td>{{author.description}}</td>
+    <td>{{author.status}}</td>
+    <td style="text-align: center;">
+      <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
+      <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+<div class="col-sm-offset-6 col-sm-6">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
