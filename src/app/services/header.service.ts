@@ -1,4 +1,6 @@
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class HeaderService {
 
   API_URL= "http://localhost:4900/api/v1/";
