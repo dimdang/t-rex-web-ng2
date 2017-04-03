@@ -21,7 +21,7 @@
   </thead>
   <tbody>
   <!-- <li *ngFor="let user of users">{{user.email}}</li>-->
-  <tr *ngFor="let author of authors| paginate: { itemsPerPage: 2, currentPage: p }">
+  <tr *ngFor="let author of authors| paginate: { itemsPerPage: 5, currentPage: p }">
     <td>{{author.id}}</td>
     <td>{{author.photo}}</td>
     <td>{{author.firstname}}</td>

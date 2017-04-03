@@ -19,7 +19,6 @@ export class CategoryFormUpdateComponent implements OnInit {
     description:""
   }
 
-
   constructor( private router:Router,private activatedRoute: ActivatedRoute,
     private categoryService:CategoryService) { }
 

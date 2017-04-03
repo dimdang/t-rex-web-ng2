@@ -49,83 +49,13 @@
         <div class="col-sm-12 ">
             <p class="pull-right" style="margin-top: 20px; margin-bottom: -10px;">Showing 1–8</p>
         </div>
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
+        <div *ngFor="let book of books" class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
+            <img style="height:270px; margin: auto" [src]="'http://localhost:4900/uploads/' + book.image" class="img-responsive" alt="Mobile and Desktop">
             <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
-            </div>
-        </div>
-
-      <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-        <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-        <div class="product-chooser-item">
-          <h4 class="title">Book Title Here</h4>
-          <p style="color:red;">by Chic Blah</p>
-          <p>$10.20</p>
-          <button class="btn btn-default">ADD TO CART</button>
-        </div>
-      </div>
-
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-            <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-            <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-            <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-            <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-            <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
-            <img style="height:270px; margin: auto" src="https://static.pexels.com/photos/46274/pexels-photo-46274.jpeg" class="img-responsive" alt="Mobile and Desktop">
-            <div class="product-chooser-item">
-                <h4 class="title">Book Title Here</h4>
-                <p style="color:red;">by Chic Blah</p>
-                <p>$10.20</p>
-                <button class="btn btn-default">ADD TO CART</button>
+                <h4 class="title">{{book.title}}</h4>
+                <p style="color:red;">{{book.author_name}}</p>
+                <p>$ {{book.price}}</p>
+                <button (click)="addToCart(book.id, book.price,book.unit)" class="btn btn-default">ADD TO CART</button>
             </div>
         </div>
 

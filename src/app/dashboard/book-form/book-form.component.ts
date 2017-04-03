@@ -32,6 +32,7 @@ export class BookFormComponent implements OnInit {
     id:0,
     photo: File,
     unit:0,
+    description:""
   }
 
   constructor(private categoryService :CategoryService,
@@ -69,6 +70,8 @@ export class BookFormComponent implements OnInit {
     book.append('category_id',this.book.category_id);
     book.append('author_id',this.book.author_id);
     book.append('language',this.book.language)
+    book.append('description',this.book.description)
+
 
     alert("book dimension:"+this.book.book_dimensions);
     this.bookService.addBook(book).subscribe(
@@ -79,7 +82,6 @@ export class BookFormComponent implements OnInit {
       error=> {
         alert("Fail");
       }
-
     )
 
   }

@@ -59,7 +59,7 @@ export class CategoryService {
 
     let headers=new Headers();
     this.header.createAuthorizationHeader(headers);
-    return this.http.put(this.header.API_URL+"categories"+id,{"category":
+    return this.http.put(this.header.API_URL+"categories/"+id,{"category":
       {
         "name": name,
         "description": description,

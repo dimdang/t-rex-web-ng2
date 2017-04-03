@@ -2,25 +2,19 @@ import { Injectable } from '@angular/core';
 import {Http, Response, Headers} from "@angular/http";
 import 'rxjs/add/operator/map'
 import {Router} from "@angular/router";
+import {HeaderService} from '../services/header.service';
 
 
 @Injectable()
 export class AuthenticateService {
 
-  API_URL= "http://localhost:4900/api/v1/";
-
-  constructor(private http: Http, private router:Router) { }
-
-  createAuthorizationHeader(headers: Headers) {
-    headers.append('Authorization', 'Basic ' +
-      'dC1yZXg6dC1yZXhAMm50JUVsaXhpcjk=');
-  }
+  constructor(private http: Http, private router:Router, private header:HeaderService) { }
 
   loginAuthenticate(email: string, password: string) {
     let headers=new Headers();
-    this.createAuthorizationHeader(headers);
+    this.header.createAuthorizationHeader(headers);
 
-    return this.http.post(this.API_URL+'login',
+    return this.http.post(this.header.API_URL+'login',
       {
         "account":
         {
@@ -33,6 +27,7 @@ export class AuthenticateService {
         console.log(user)
         if (user && user.data.token) {
           localStorage.setItem('token', JSON.stringify(user.data.token));
+          localStorage.setItem('userId', JSON.stringify(user.data.id));
           this.router.navigate(["/dashboard"]);
         }else {
           alert("Email or password incorrect")
@@ -47,8 +42,8 @@ export class AuthenticateService {
 
   registerAuthenticate(email: string, password: string){
     let headers=new Headers();
-    this.createAuthorizationHeader(headers);
-    return this.http.post(this.API_URL+"accounts",{
+    this.header.createAuthorizationHeader(headers);
+    return this.http.post(this.header.API_URL+"accounts",{
       "account":
       {
         "email": email,

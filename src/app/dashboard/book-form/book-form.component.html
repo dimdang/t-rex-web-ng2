@@ -86,6 +86,15 @@
       </div>
     </div>
 
+    <div class="form-group">
+      <label class="col-md-4 control-label pull-left" for="lang">Description</label>
+      <div class="col-md-4">
+        <input id="lang" name="twitter" type="text" placeholder="Description" class="form-control input-md" required=""
+               [(ngModel)]="book.description" [ngModelOptions]="{standalone: true}">
+
+      </div>
+    </div>
+
     <!-- Text input-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="shipping">Shipping Weight</label>

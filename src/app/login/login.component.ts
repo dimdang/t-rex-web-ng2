@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticateService} from './authenticate.service';
 import {Router} from "@angular/router";
+import {HeaderService} from '../services/header.service';
 
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers:[AuthenticateService]
+  providers:[AuthenticateService,HeaderService]
 })
 export class LoginComponent implements OnInit {
   object=[];
@@ -31,4 +32,3 @@ export class LoginComponent implements OnInit {
         });
   }
 }
-

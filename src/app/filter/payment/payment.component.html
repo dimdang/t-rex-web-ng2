@@ -28,6 +28,7 @@
                       placeholder="Valid Card Number"
                       autocomplete="cc-number"
                       required autofocus
+                      [(ngModel)]="cart.number" [ngModelOptions]="{standalone: true}"
                     />
                     <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
                   </div>
@@ -37,14 +38,15 @@
             <div class="row">
               <div class="col-xs-7 col-md-7">
                 <div class="form-group">
-                  <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                  <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span> MONTH</label>
                   <input
                     type="tel"
                     class="form-control"
                     name="cardExpiry"
-                    placeholder="MM / YY"
+                    placeholder="MM "
                     autocomplete="cc-exp"
                     required
+                    [(ngModel)]="cart.exp_month" [ngModelOptions]="{standalone: true}"
                   />
                 </div>
               </div>
@@ -52,9 +54,9 @@
                 <div class="form-group">
                   <label for="cardCVC">CV CODE</label>
                   <input
+                    [(ngModel)]="cart.cvc" [ngModelOptions]="{standalone: true}"
                     type="tel"
                     class="form-control"
-                    name="cardCVC"
                     placeholder="CVC"
                     autocomplete="cc-csc"
                     required
@@ -63,16 +65,25 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 col-md-12">
                 <div class="form-group">
-                  <label for="couponCode">COUPON CODE</label>
-                  <input type="text" class="form-control" name="couponCode" />
+                  <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span> YEAR</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="cardExpiry"
+                    placeholder="YY"
+                    autocomplete="cc-exp"
+                    required
+                    [(ngModel)]="cart.exp_year" [ngModelOptions]="{standalone: true}"
+                  />
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col-xs-12">
-                <button class="subscribe btn btn-success btn-lg btn-block" type="button">Start Payment</button>
+                <button class="subscribe btn btn-success btn-lg btn-block" (click)="addPayment()" type="button">Start Payment</button>
               </div>
             </div>
             <div class="row" style="display:none;">
