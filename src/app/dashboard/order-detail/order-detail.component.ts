@@ -11,7 +11,8 @@ import {Router, ActivatedRoute, Params} from '@angular/router';
 })
 export class OrderDetailComponent implements OnInit {
   books=[];
-
+  profile=[];
+  total=0;
   constructor(
     private orderService: OrderService,
     private activatedRoute:ActivatedRoute,
@@ -23,8 +24,11 @@ export class OrderDetailComponent implements OnInit {
       let id = params['id'];
       this.orderService.getOrderDatail(id).subscribe(
         data=>{
-          this.books=data.data;
-          console.log(this.books);
+          this.books=data.data.books;
+          this.profile=data.data.profile;
+          data.data.books.forEach(element=>{
+            this.total += element.sub_total;
+          })
         });
     });
   }
