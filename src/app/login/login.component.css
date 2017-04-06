@@ -1,3 +1,7 @@
 .form-group, .btn{
   margin-right: 50px;
 }
+input, .btn{
+  border-radius: 0px;
+
+}

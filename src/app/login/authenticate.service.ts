@@ -38,6 +38,7 @@ export class AuthenticateService {
 
   logout() {
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');  
   }
 
   registerAuthenticate(email: string, password: string){

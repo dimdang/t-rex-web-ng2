@@ -30,7 +30,7 @@
                 </button>
 
                 <a class="navbar-brand" [routerLink]="['/home/feature']">
-                  <img class="img-responsive" src="http://www.logologo.com/logos/flower-logo.jpg">
+                  <img class="img-responsive" src="https://www.avira.com/images/content/press/press-material-v3/Avira_Logo_transparent_large.png">
                 </a>
             </div>
             <div class="collapse navbar-collapse"  id="collapse">
@@ -40,8 +40,8 @@
                     <li><a [routerLinkActive]="['border-bottom']" [routerLink]="['/book']">BOOKS</a></li>
                     <li><a [routerLinkActive]="['border-bottom']" [routerLink]="['/author']">AUTHORS</a></li>
                     <li  class="border"><a [routerLinkActive]="['border-bottom']" [routerLink]="['/contact']" >CONTACT US</a></li>
-                    <li><a [routerLinkActive]="['border-bottom']" [routerLink]="['/cart']"><i class="fa fa-shopping-basket lg" aria-hidden="true"></i>
-                        <span class="badge">5</span></a></li>
+                    <li><a [routerLinkActive]="['border-bottom']" [routerLink]="['/cart']"><i  class="fa fa-shopping-basket lg" aria-hidden="true"></i>
+                        <span *ngIf="cartNumber > 0" class="badge">{{cartNumber}}</span></a></li>
                     <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
                         <ul class="dropdown-menu" style="border-radius: 5px;">
                             <input style="width:200px; margin: 5px 10px; " type="text"  placeholder="Search...">

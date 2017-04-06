@@ -11,10 +11,10 @@
   </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Dara</td>
-      <td>Chan</td>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
       <td>Phnom Penh</td>
       <td>true</td>
       <td style="text-align: center"><img style="width: 60px;" src="https://www.thesun.co.uk/wp-content/uploads/2017/01/nintchdbpict000292801126.jpg?strip=all&w=960" alt=""></td>
@@ -23,53 +23,6 @@
         <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
       </td>
     </tr>
-    <tr>
-      <td>1</td>
-      <td>Dara</td>
-      <td>Chan</td>
-      <td>Phnom Penh</td>
-      <td>true</td>
-      <td style="text-align: center"><img style="width: 60px;" src="http://images.performgroup.com/di/library/GOAL_INTERNATIONAL/c2/97/hd-lionel-messi-barcelona_5toanmhsh09f11z1b8ucasj4p.jpg?t=1838656488&w=620&h=430" alt=""></td>
-      <td style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
-        <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Dara</td>
-      <td>Chan</td>
-      <td>Phnom Penh</td>
-      <td>true</td>
-      <td style="text-align: center"><img style="width: 60px;" src="https://pbs.twimg.com/media/BtPdJtpCIAAKVIi.jpg" alt=""></td>
-      <td style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
-        <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Dara</td>
-      <td>Chan</td>
-      <td>Phnom Penh</td>
-      <td>true</td>
-      <td style="text-align: center"><img style="width: 60px;" src="https://i.ytimg.com/vi/yHlHIUqntWI/maxresdefault.jpg" alt=""></td>
-      <td style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
-        <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
-      </td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Dara</td>
-      <td>Chan</td>
-      <td>Phnom Penh</td>
-      <td>true</td>
-      <td style="text-align: center"><img style="width: 60px;" src="https://www.thesun.co.uk/wp-content/uploads/2017/01/nintchdbpict000292801126.jpg?strip=all&w=960" alt=""></td>
-      <td style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-edit"></i></button>
-        <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-trash"></i></button>
-      </td>
-    </tr>
+
   </tbody>
 </table>

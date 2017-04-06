@@ -1,27 +1,26 @@
 <form class="form-horizontal" (ngSubmit)="addAuthor()">
   <fieldset>
 
-    <!-- Form Name -->
+
     <legend>Add Author</legend>
 
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">Photo</label>
+      <label class="col-md-4 control-label" for="image">Image</label>
       <div class="col-md-4">
-        <input id="photot" name="photo" type="text" placeholder="Photo" class="form-control input-md" required=""
-               [(ngModel)]="author.photo" [ngModelOptions]="{standalone: true}">
+        <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".png,.jpg,.jpeg">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">First Name</label>
+      <label class="col-md-4 control-label" for="firstname">First Name</label>
       <div class="col-md-4">
-        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required=""
+        <input id="firstname" name="firstname" type="text" placeholder="First Name" class="form-control input-md" required=""
                [(ngModel)]="author.firstname" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Autre">Last Name</label>
+      <label class="col-md-4 control-label" for="lastname">Last Name</label>
       <div class="col-md-4">
-        <input id="Autre" name="Autre" type="text" placeholder="Category Name" class="form-control input-md" required=""
+        <input id="lastname" name="lastname" type="text" placeholder="Last Name" class="form-control input-md" required=""
                [(ngModel)]="author.lastname" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
@@ -30,6 +29,13 @@
       <div class="col-md-4">
         <input id="url" name="url" type="text" placeholder="Description" class="form-control input-md" required=""
                [(ngModel)]="author.description" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="position">Position</label>
+      <div class="col-md-4">
+        <input id="position" name="position" type="text" placeholder="Position" class="form-control input-md" required=""
+               [(ngModel)]="author.position" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <!-- Text input-->
@@ -47,6 +53,5 @@
         <a [routerLink]="['/dashboard/author']" class="btn btn-default pull-right">Cancel</a>
       </div>
     </div>
-    <image-upload [url]="'C:\Users\acer\Desktop\Pipe'"></image-upload>
   </fieldset>
 </form>

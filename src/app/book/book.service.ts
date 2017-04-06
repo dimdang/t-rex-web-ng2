@@ -7,7 +7,6 @@ export class BookService {
 
   constructor(private  http:Http, private header:HeaderService) { }
 
-
   getBooks(){
     let headers=new Headers();
     this.header.createAuthorizationHeader(headers)
@@ -20,6 +19,16 @@ export class BookService {
     let headers=new Headers();
     this.header.createAuthorizationHeader(headers);
     return this.http.get(this.header.API_URL+"authors/"+id,{
+      headers: headers
+    }).map(
+      (res)=> res.json()
+    )
+  }
+
+  getBookById(id:number){
+    let headers=new Headers();
+    this.header.createAuthorizationHeader(headers);
+    return this.http.get(this.header.API_URL+"books/"+id,{
       headers: headers
     }).map(
       (res)=> res.json()

@@ -9,6 +9,7 @@ import {HeaderService} from '../../services/header.service';
   styleUrls: ['./books.component.css'],
   providers:[BookService, HeaderService]
 })
+
 export class BooksComponent implements OnInit {
   books=[]
   book = {
@@ -25,7 +26,8 @@ export class BooksComponent implements OnInit {
     id:0,
     category_id:1,
     book_dimension:"",
-    author_id:0
+    author_id:0,
+    is_feature:false
 
   }
 
@@ -38,5 +40,19 @@ export class BooksComponent implements OnInit {
       res=> this.books=res.data
     )
   }
+
+  deleteBook(id:number){
+
+    this.bookService.deleteBook(id).subscribe(
+      data =>{
+        alert("success");
+        this.bookService.getBooks().subscribe(
+          (data) => {
+                      this.books=data.data;
+        });
+      }
+    )
+
+    }
 
 }

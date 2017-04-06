@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
+import {Http} from '@angular/http';
 //import {CheckAuthenticationService} from './services/check-authentication.service';
 
 @Component({
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+
   title = 'app works!';
+  constructor(private http:Http){}
+
 }

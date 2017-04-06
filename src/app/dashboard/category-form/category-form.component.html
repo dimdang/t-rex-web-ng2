@@ -27,6 +27,13 @@
       </div>
     </div>
     <div class="form-group">
+      <label class="col-md-4 control-label" for="facebook">Status</label>
+      <div class="col-md-4">
+        <input id="facebook" name="facebook" type="text" placeholder="Status" class="form-control input-md" required=""
+               [(ngModel)]="category.status" [ngModelOptions]="{standalone: true}">
+      </div>
+    </div>
+    <div class="form-group">
       <label class="col-md-4 control-label" ></label>
       <div class="col-md-4">
         <button class="btn btn-primary">Add New</button>

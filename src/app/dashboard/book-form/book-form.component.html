@@ -1,8 +1,8 @@
 <form class="form-horizontal" enctype="multipart/form-data" (ngSubmit)="addBook()">
   <fieldset>
-    <!-- Form Name -->
+
     <legend>Add Book</legend>
-    <!-- Text input-->
+
     <div class="form-group">
       <label class="col-md-4 control-label" for="url">Image</label>
       <div class="col-md-4">
@@ -10,7 +10,6 @@
       </div>
     </div>
 
-    <!-- Text input-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="facebook">Title</label>
       <div class="col-md-4">
@@ -19,7 +18,7 @@
       </div>
     </div>
 
-    <!-- Text input-->
+
     <div class="form-group">
       <label class="col-md-4 control-label pull-left" for="twitter">ISBN</label>
       <div class="col-md-4">
@@ -134,6 +133,18 @@
         </select>
       </div>
     </div>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Author">Feature</label>
+      <div class="col-md-4">
+        <select name=""  class="form-control" [(ngModel)]="book.is_feature" [ngModelOptions]="{standalone: true}">
+          <option value="" selected disabled>---Select---</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+    </div>
+
     <div class="form-group">
       <label class="col-md-4 control-label" ></label>
       <div class=" col-md-4">

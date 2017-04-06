@@ -25,4 +25,33 @@ export class BookService {
       (res)=> res.json()
     )
   }
+
+  updateBook(book:FormData, id:number){
+
+    let headers=new Headers();
+    this.header.createAuthorizationHeader(headers);
+    return this.http.put(this.header.API_URL+"books/"+id,book,{
+      headers: headers
+    }).map(
+      (res)=> res.json()
+    )
+  }
+
+  getBookById(id:number){
+    let headers=new Headers();
+    this.header.createAuthorizationHeader(headers);
+    return this.http.get(this.header.API_URL+"books/"+id,{
+      headers: headers
+    }).map(
+      (res)=> res.json()
+    )
+  }
+
+  deleteBook(id:number){
+    let headers=new Headers();
+    this.header.createAuthorizationHeader(headers);
+    return this.http.delete(this.header.API_URL+"books/"+id,{headers}).map(
+      res=> {return ;}
+    )
+  }
 }

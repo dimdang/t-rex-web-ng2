@@ -17,23 +17,43 @@ export class AuthorService {
     )
   }
 
-  addAuthor(photo: string, firstname:string, lastname:string, description:string, status:boolean){
+  addAuthor(author:FormData){
 
-    let headers=new Headers();
-    this.header.createAuthorizationHeader(headers);
-    return this.http.post(this.header.API_URL+"authors",{"author":
-    {
-      "photo":photo,
-      "lastname": lastname,
-      "firstname": firstname,
-      "status": status,
-      "description":description
+      let headers=new Headers();
+      this.header.createAuthorizationHeader(headers);
+      return this.http.post(this.header.API_URL+"authors",author,{
+        headers: headers
+      }).map(
+        (res)=> res.json()
+      )
     }
-    },{
-      headers: headers
-    }).map(
-      (res)=> res.json()
-    )
-  }
 
+    deleteAuthor(id:number){
+      let headers=new Headers();
+      this.header.createAuthorizationHeader(headers);
+      return this.http.delete(this.header.API_URL+"authors/"+id,{headers}).map(
+        res=> {return ;}
+      )
+    }
+
+    updateAuthor(author:FormData, id:number){
+
+      let headers=new Headers();
+      this.header.createAuthorizationHeader(headers);
+      return this.http.put(this.header.API_URL+"authors/"+id,author,{
+        headers: headers
+      }).map(
+        (res)=> res.json()
+      )
+    }
+
+    getAuthorById(id:number){
+      let headers=new Headers();
+      this.header.createAuthorizationHeader(headers);
+      return this.http.get(this.header.API_URL+"authors/"+id,{
+        headers: headers
+      }).map(
+        (res)=> res.json()
+      )
+    }
 }

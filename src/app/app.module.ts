@@ -46,6 +46,14 @@ import { CategoryFormUpdateComponent } from './dashboard/category-form-update/ca
 import {HeaderService} from './services/header.service';
 import { AuthorFormUpdateComponent } from './dashboard/author-form-update/author-form-update.component';
 import { BookFormUpdateComponent } from './dashboard/book-form-update/book-form-update.component';
+import { MainDashboardComponent } from './dashboard/main-dashboard/main-dashboard.component';
+import { OrderDetailComponent } from './dashboard/order-detail/order-detail.component';
+import { BookPipe } from './dashboard/books/book.pipe';
+import { AuthorPipe } from './dashboard/author/author.pipe';
+import { OrderPipe } from './dashboard/dash-order/order.pipe';
+import { SlidesModule } from 'ng2-slides';
+
+
 @NgModule({
 
   declarations: [
@@ -83,6 +91,12 @@ import { BookFormUpdateComponent } from './dashboard/book-form-update/book-form-
     CategoryFormUpdateComponent,
     AuthorFormUpdateComponent,
     BookFormUpdateComponent,
+    MainDashboardComponent,
+    OrderDetailComponent,
+    BookPipe,
+    AuthorPipe,
+    OrderPipe,
+
      ],
 
   imports: [
@@ -90,6 +104,7 @@ import { BookFormUpdateComponent } from './dashboard/book-form-update/book-form-
     Ng2PaginationModule,
     BrowserModule,
     ReactiveFormsModule,
+    SlidesModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
@@ -104,14 +119,17 @@ import { BookFormUpdateComponent } from './dashboard/book-form-update/book-form-
           {path: 'order', component: DashOrderComponent},
           {path: 'add-category', component: CategoryFormComponent},
           {path: 'update-category/:id', component: CategoryFormUpdateComponent},
+          {path: 'update-book/:id', component: BookFormUpdateComponent},
+          {path: 'update-author/:id', component: AuthorFormUpdateComponent},
+          {path: 'order-detail/:id', component: OrderDetailComponent},
+           {path: 'dash-home', component: MainDashboardComponent},
           { path: '**', redirectTo: 'BooksComponent'},
-
         ]
       },
       {path: '', component :HeaderComponent,
         children: [
           {path: 'payment', component :PaymentComponent},
-          {path: 'details', component :ProductDetailComponent},
+          {path: 'details/:id', component :ProductDetailComponent},
           {path: 'cart', component :CartComponent},
           {path: 'contact', component :ContactComponent},
           {path: 'author', component :AuthorComponent},

@@ -26,4 +26,16 @@ export class DashAuthorComponent implements OnInit {
     )
   }
 
+  deleteAuthor(id:number){
+    this.authorService.deleteAuthor(id).subscribe(
+      data =>{
+        alert("success");
+        this.authorService.getAuthor().subscribe(
+          (data) => {
+                      this.authors=data.data;
+        });
+      }
+    )
+  }
+
 }

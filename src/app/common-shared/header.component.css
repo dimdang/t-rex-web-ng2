@@ -2,8 +2,8 @@ thead{
     color: #039be5;
 }
 .navbar-brand img{
-  width:170px;
-  height: 100px;
+  width:150px;
+  height: 80px;
   margin-top: -50px;
 }
 
@@ -64,4 +64,11 @@ footer{
 }
 .footer{
     margin-top: 60px;
+}
+.second-nav .navbar-default{
+  background: #fff;
+  border:none;
+}
+@@media o {
+
 }

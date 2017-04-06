@@ -6,27 +6,33 @@ import {HeaderService} from '../services/header.service';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
-  providers:[CartService,HeaderService]
+  providers:[CartService, HeaderService]
 })
 export class CartComponent implements OnInit {
   carts=[];
   total=0;
+  cartNumber=0;
 
   constructor(private cartService:CartService) { }
 
   ngOnInit() {
-    this.cartService.getCart().subscribe(
-      (data) => {
 
-        console.log(data);
-        this.carts=data.data.books;
+    let userLogin=localStorage.getItem("userId");
+    if(userLogin !==null){
+      this.cartService.getCart().subscribe(
+        (data) => {
+          this.carts=data.data.books;
 
-        this.carts.forEach((item) => {
-          this.total+=item.sub_total;
+          this.carts.forEach((item) => {
+            this.total+=item.sub_total;
+          });
+          // get all number product in cart
+          data.data.books.forEach(element=>{
+            this.cartNumber+=element.unit;
+          });
         });
-        
-      }
-    )
+
+    }
   }
 
 }

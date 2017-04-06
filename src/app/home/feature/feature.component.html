@@ -1,19 +1,9 @@
 <div class="row all-product ">
-  <div class="col-lg-4 col-sm-6 ">
-    <a [routerLink]="['/details']"><img src="http://sanctonwood.co.uk/wp-content/uploads/2016/02/stack_of_books.jpg" alt="" class="img-responsive"></a>
-    <h4>Books Titile Go Here</h4>
-    <p>by Chic Blah </p>
+
+  <div *ngFor="let book of books| slice:0:3" class="col-lg-4 col-sm-6 ">
+    <a [routerLink]="['/details', book.id]"><img [src]=" 'http://localhost:4900/uploads/'+book.image " alt="" class="img-responsive"></a>
+    <h4>{{book.title}}</h4>
+    <p style="color:red">{{book.author_name}} </p>
   </div>
 
-  <div class="col-lg-4 col-sm-6 ">
-    <img src="http://sanctonwood.co.uk/wp-content/uploads/2016/02/stack_of_books.jpg" alt="" class="img-responsive">
-    <h4>Books Titile Go Here</h4>
-    <p>by Chic Blah </p>
-  </div>
-
-  <div class="col-lg-4  col-sm-6  ">
-    <img src="http://sanctonwood.co.uk/wp-content/uploads/2016/02/stack_of_books.jpg" alt="" class="img-responsive">
-    <h4>Books Titile Go Here</h4>
-    <p>by Chic Blah </p>
-  </div>
 </div>
