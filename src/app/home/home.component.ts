@@ -338,7 +338,7 @@ export class HomeComponent implements OnInit {
             num: 3,
             maxWidth: 300,
             maxHeight: 400,
-            distance: 20,
+            distance: 30,
             scale: 0.6,
             animationTime: 1000,
             showTime: 4000

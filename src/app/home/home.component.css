@@ -6,6 +6,7 @@
   margin: auto;
   padding-bottom: 120px;
   padding-top: 45px;
+  position:relative;
 }
 .slide .btn{
   border-radius: 0px;
