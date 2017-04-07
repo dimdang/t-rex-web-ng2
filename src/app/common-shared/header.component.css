@@ -31,8 +31,15 @@ thead{
 }
 
 .border-bottom{
-
     border-bottom:3px solid red;
+    padding-bottom: 7px;
+}
+.navbar-nav>li>a{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.navbar-nav>li{
+  padding:0px 15px;
 }
 
 footer{
@@ -69,6 +76,49 @@ footer{
   background: #fff;
   border:none;
 }
-@@media o {
 
+@media only screen and (max-width: 414px) {
+    .navbar-brand>img{
+      width:50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-top: -14px;
+    }
+
+    .navbar-brand{
+      text-align: center;
+    }
+    .navbar-collapse{
+      background: rgba(85, 85, 85, 0.23);
+      margin-right: -3px;
+    }
+    .navbar-header{
+      background: rgba(85, 85, 85, 0.23);
+      margin-top: -50px;
+      text-align: center;
+    }
+    .navbar-header a{
+      margin: auto;
+    }
+    .main-menu-top{
+      text-align: center;
+    }
+}
+@media only screen and (max-width: 768px) {
+  .navbar-nav>li{
+    padding:0px 10px;
+  }
+  .main-menu-top{
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 764px) {
+  .navbar-brand>img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -14px;
+  }
 }
